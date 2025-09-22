@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="imagens/logo.png" type="image/png" style="border-radius: 12px;  height: 30px;">
+  <link rel="icon" href="imagens/logo.png" type="image/png">
   <title>Vtec Automação Comercial e Informática</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -29,14 +29,11 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <!-- Vídeo de fundo -->
     <video autoplay muted loop playsinline class="bg-video">
       <source src="video/video.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos em HTML5.
     </video>
-
-    <!-- Conteúdo sobreposto -->
-    <div class="hero-content">
+    <div class="hero-content fade-up">
       <h1>Soluções em Automação Comercial & Informática</h1>
       <p>Atendimento personalizado, suporte técnico, software e hardware para sua empresa.</p>
       <a href="#contato" class="btn-primary">Fale Conosco</a>
@@ -46,13 +43,13 @@
   <!-- SOBRE -->
   <section id="sobre" class="section">
     <div class="container grid">
-      <div>
+      <div class="fade-left">
         <h2>Quem Somos</h2>
         <p>
           A <strong>Vtec Automação Comercial e Informática</strong> atua nas áreas de tecnologia e automação comercial, oferecendo serviços especializados como instalação e manutenção de máquinas, automação de processos, suporte técnico e soluções integradas para empresas.
         </p>
       </div>
-      <img src="imagens/2.webp" alt="Equipe Vtec" class="rounded-img" />
+      <img src="imagens/2.webp" alt="Equipe Vtec" class="rounded-img fade-right" />
     </div>
   </section>
 
@@ -61,22 +58,22 @@
     <div class="container">
       <h2 class="section-title">Nossos Serviços</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card fade-up">
           <img src="imagens/2.webp" alt="Certificado Digital" />
           <h3>Certificado Digital</h3>
           <p>Emissão e renovação remota ou presencial com segurança e validade jurídica.</p>
         </div>
-        <div class="card">
+        <div class="card fade-up">
           <img src="imagens/2.webp" alt="Sistemas Fiscais" />
           <h3>Implantação de Sistemas Fiscais</h3>
           <p>Instalação rápida e segura de sistemas fiscais para sua empresa.</p>
         </div>
-        <div class="card">
-          <img src="imagens/2webp" alt="Suporte Técnico" />
+        <div class="card fade-up">
+          <img src="imagens/2.webp" alt="Suporte Técnico" />
           <h3>Suporte Técnico</h3>
           <p>Equipe pronta para resolver dúvidas e problemas de informática.</p>
         </div>
-        <div class="card">
+        <div class="card fade-up">
           <img src="imagens/2.webp" alt="Manutenção" />
           <h3>Manutenção Preventiva</h3>
           <p>Serviços para manter seus equipamentos funcionando sempre bem.</p>
@@ -88,32 +85,41 @@
   <!-- GALERIA -->
   <section id="galeria" class="section">
     <div class="container">
-      <h2 class="section-title">Galeria</h2>
+      <h2 class="section-title fade-up">Galeria</h2>
       <div class="grid-gallery">
-        <img src="imagens/2.webp" alt="Projeto 1" />
-        <img src="imagens/2.webp" alt="Projeto 2" />
-        <img src="imagens/2.webp" alt="Projeto 3" />
-        <img src="imagens/2.webp" alt="Projeto 4" />
-        <img src="imagens/2.webp" alt="Projeto 5" />
-        <img src="imagens/2.webp" alt="Projeto 6" />
+        <img src="imagens/2.webp" alt="Projeto 1" class="fade-up" />
+        <img src="imagens/2.webp" alt="Projeto 2" class="fade-up" />
+        <img src="imagens/2.webp" alt="Projeto 3" class="fade-up" />
+        <img src="imagens/2.webp" alt="Projeto 4" class="fade-up" />
+        <img src="imagens/2.webp" alt="Projeto 5" class="fade-up" />
+        <img src="imagens/2.webp" alt="Projeto 6" class="fade-up" />
       </div>
     </div>
   </section>
 
   <!-- LOCALIZAÇÃO -->
-  <section id="localizacao" class="section">
-    <div class="container">
-      <h2 class="section-title">Onde Estamos</h2>
-      <p>📍 Rua Vicente Favela, 360 - Cruzeiro, Lavras da Mangabeira - CE</p>
+  <section id="localizacao" class="localizacao">
+    <div class="container fade-up">
+      <h2>Onde Estamos</h2>
+      <p>Visite-nos em nossa sede para atendimento presencial:</p>
+      <p><strong>📍 Endereço:</strong> Rua Vicente Favela, 360 - Cruzeiro, Lavras da Mangabeira - CE</p>
       <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
+        <iframe 
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7Tpz2OqneToOuuKmiuLz8FVp-Vh1O2_I&q=VTec+Informática+e+Automação+Comercia"
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
 
   <!-- CONTATO -->
   <section id="contato" class="section light-bg">
-    <div class="container">
+    <div class="container fade-up">
       <h2 class="section-title">Contato</h2>
       <p>📞 <a href="tel:+5588995722988">(88) 99572-2988</a></p>
       <p>📧 <a href="mailto:financeiro.vtec@hotmail.com">financeiro.vtec@hotmail.com</a></p>
@@ -123,7 +129,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container grid">
+    <div class="container grid fade-up">
       <div>
         <img src="imagens/logo.png" alt="Logo Vtec" class="logo-footer" />
         <p>© 2025 Vtec Automação Comercial e Informática.</p>
