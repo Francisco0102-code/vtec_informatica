@@ -140,6 +140,7 @@ body {
   letter-spacing: 1px;
   background: linear-gradient(90deg, #0070f3, #00c6ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: slideIn 1s ease forwards;
 }
@@ -208,7 +209,7 @@ body {
 .card img {
   border-radius: 8px;
   margin-bottom: 1rem;
-  align-items: auto
+  align-items: auto ;
   object-fit: cover;
   margin: 0 auto 1rem;
 }
