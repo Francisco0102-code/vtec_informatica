@@ -204,6 +204,22 @@ body {
   text-align: center;
 }
 
+.btn-primary {
+  background: #0070f3;
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: #0059c9;
+  transform: scale(1.05);
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -217,6 +233,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   justify-items: center;
+}
+
+.logo-footer {
+  height: 40px; /* mantém do jeito que estava */
+  border-radius: 50%; /* mantém circular */
+  padding: 1px; /* mantém padding */
+  background: #fff; /* mantém fundo branco */
 }
 
 /* =========================
