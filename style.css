@@ -61,7 +61,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #ffffff50;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   z-index: 1000;
 }
@@ -229,10 +229,13 @@ body {
   justify-items: center; /* garante alinhamento central */
 }
 
-.grid-gallery img {
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
+  /* imagens da galeria ocupam toda a coluna no PC */
+  .grid-gallery img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
 
 .grid-gallery img:hover {
   transform: scale(1.05);
@@ -246,6 +249,7 @@ body {
   height: 350px;
   border: 0;
   border-radius: 12px;
+  
 }
 
 /* =========================
@@ -363,6 +367,17 @@ body {
 }
 
 /* =========================
+   AJUSTE IMAGENS NO DESKTOP
+========================= */
+@media (min-width: 992px) {
+  /* aumenta a imagem da seção "quem somos" no PC */
+  .rounded-img {
+    max-width: 650px; /* antes era 450px */
+  }
+
+}
+
+/* =========================
    ANIMAÇÕES
 ========================= */
 @keyframes fadeUp {
@@ -384,3 +399,4 @@ body {
   opacity: 1;
   transform: translate(0);
 }
+
