@@ -207,7 +207,7 @@ body {
   margin-bottom: 0.8rem;
   object-fit: cover;
   width: 100%;
-  height: 120px; /* altura menor */
+  height: 140px; /* altura menor */
 }
 
 #servicos .card h3 {
@@ -216,10 +216,13 @@ body {
 }
 
 #servicos .card p {
-  font-size: 0.9rem;
-  line-height: 1.3;
-  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* mostra no máximo 3 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 
 
 /* Desfoque suave para os outros cards */
