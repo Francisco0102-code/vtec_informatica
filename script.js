@@ -134,3 +134,13 @@ document.body.addEventListener('click', () => {
 });
 
 
+document.querySelectorAll(".fade-up, .fade-left, .fade-right, #servicos .section-title")
+.forEach(el => {
+  // Se o elemento já está visível, adiciona a classe imediatamente
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight) {
+    el.classList.add("visible");
+  } else {
+    observer.observe(el);
+  }
+});
