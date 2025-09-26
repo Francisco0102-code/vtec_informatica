@@ -100,3 +100,37 @@ if (welcomeMessage) {
     welcomeMessage.textContent = "Seja bem-vindo(a)!";
   }
 }
+
+// ==============================
+// DESTAQUE NOS CARDS COM DESFOQUE SUAVE
+// ==============================
+const servicosCards = document.querySelectorAll('#servicos .card');
+
+servicosCards.forEach(card => {
+  // Click: apenas um ativo por vez
+  card.addEventListener('click', (e) => {
+    servicosCards.forEach(c => c.classList.remove('ativo', 'blur'));
+    card.classList.add('ativo');
+    servicosCards.forEach(c => {
+      if (c !== card) c.classList.add('blur');
+    });
+    e.stopPropagation();
+  });
+
+  // Hover: desfoca os outros cards temporariamente
+  card.addEventListener('mouseenter', () => {
+    servicosCards.forEach(c => {
+      if (c !== card) c.classList.add('blur');
+    });
+  });
+  card.addEventListener('mouseleave', () => {
+    servicosCards.forEach(c => c.classList.remove('blur'));
+  });
+});
+
+// Click fora remove destaque e desfoque
+document.body.addEventListener('click', () => {
+  servicosCards.forEach(c => c.classList.remove('ativo', 'blur'));
+});
+
+
