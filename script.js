@@ -15,6 +15,14 @@ navLinks.forEach(link => {
   });
 });
 
+document.addEventListener('click', (e) => {
+  if (
+    !nav.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    nav.classList.remove('active');
+  }
+});
 // ==============================
 // ANIMAÇÕES AO ROLAR (IntersectionObserver)
 // ==============================
@@ -80,28 +88,6 @@ imageModal.addEventListener("click", (e) => {
 });
 
 // ==============================
-// SAUDAÇÃO PERSONALIZADA COM LOCALSTORAGE
-// ==============================
-const welcomeMessage = document.getElementById("welcomeMessage");
-
-if (welcomeMessage) {
-  let userName = localStorage.getItem("userName");
-
-  if (!userName) {
-    userName = prompt("Digite seu nome para personalizar sua visita:");
-    if (userName && userName.trim() !== "") {
-      localStorage.setItem("userName", userName);
-    }
-  }
-
-  if (userName && userName.trim() !== "") {
-    welcomeMessage.textContent = `Seja bem-vindo(a), ${userName}!`;
-  } else {
-    welcomeMessage.textContent = "Seja bem-vindo(a)!";
-  }
-}
-
-// ==============================
 // DESTAQUE NOS CARDS COM DESFOQUE SUAVE
 // ==============================
 const servicosCards = document.querySelectorAll('#servicos .card');
@@ -144,3 +130,43 @@ document.querySelectorAll(".fade-up, .fade-left, .fade-right, #servicos .section
     observer.observe(el);
   }
 });
+
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > hero.offsetHeight - 70) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Quando o usuário rolar a página
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
+
+/*
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark'); // adiciona ou remove a classe dark
+
+  if(body.classList.contains('dark')){
+    darkModeToggle.textContent = '☀️ Modo Claro';
+  } else {
+    darkModeToggle.textContent = '🌙 Modo Escuro';
+  }
+});
+*/
+
+
