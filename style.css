@@ -48,6 +48,9 @@ body {
 /* =========================
    HEADER
 ========================= */
+/* =========================
+   HEADER
+========================= */
 .header {
   position: fixed;
   top: 0;
@@ -63,6 +66,8 @@ body {
 .header.scrolled {
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95); /* Gradual aparece sobre o conteúdo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* sombra suave */
 }
 
 .header-content {
@@ -146,6 +151,30 @@ body {
   }
 }
 
+@media (max-width: 992px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: #fff;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1500;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block; /* Hamburger só aparece em telas pequenas */
+  }
+}
+
 /* =========================
    HERO / VÍDEO
 ========================= */
@@ -170,6 +199,7 @@ body {
   z-index: -1;
   filter: brightness(0.6);
 }
+
 
 /* =========================
    GRID & QUEM SOMOS
@@ -470,3 +500,4 @@ body {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(0.8); opacity: 0; }
 }
+
