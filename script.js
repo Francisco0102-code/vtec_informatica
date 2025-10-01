@@ -155,18 +155,12 @@ window.addEventListener("scroll", () => {
 
 
 /*
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+const toggleDark = document.querySelector('#dark-mode-toggle');
 
-darkModeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark'); // adiciona ou remove a classe dark
-
-  if(body.classList.contains('dark')){
-    darkModeToggle.textContent = '☀️ Modo Claro';
-  } else {
-    darkModeToggle.textContent = '🌙 Modo Escuro';
-  }
+toggleDark.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 });
 */
+
 
 

@@ -359,24 +359,25 @@ body {
 .btn-primary {
   background: #0070f3;
   color: #fff;
-  padding: 0.9rem 2.2rem;
+  padding: 0.8rem 1.8rem; /* reduz padding para desktop */
   border-radius: 999px;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-block;
   text-align: center;
-  max-width: 100%; /* impede que ultrapasse a tela */
-  box-sizing: border-box; /* garante que o padding seja incluso na largura */
-  white-space: nowrap; /* impede quebra de linha */
+  max-width: 100%; /* nunca ultrapassa container */
+  box-sizing: border-box;
 }
 
 @media (max-width: 500px) {
   .btn-primary {
-    width: 100%;      /* ocupa toda a largura do container */
-    padding: 0.7rem 1rem; /* diminui o padding */
-    font-size: 0.9rem;    /* reduz a fonte se quiser */
+    width: 90%;          /* ocupa quase toda a largura do container */
+    padding: 0.7rem 1rem; /* padding menor */
+    font-size: 0.95rem;   /* reduz levemente a fonte */
+    margin: 0 auto;       /* centraliza no container */
   }
 }
+
 
 @media (min-width: 501px) {
   .btn-primary {
@@ -392,6 +393,35 @@ body {
   transform: scale(1.05);
 }
 
+
+/* Botão Fale Conosco */
+#contato .btn-primary {
+  background: #0070f3;
+  color: #fff;
+  padding: 0.8rem 1.8rem; /* padding desktop */
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 500px) {
+  #contato .btn-primary {
+    width: 90%;          /* ocupa quase toda a largura */
+    padding: 0.7rem 1rem; /* menor padding */
+    font-size: 0.95rem;   /* texto proporcional */
+    margin: 0 auto;       /* centraliza */
+    display: block;       /* garante que ocupe a largura */
+  }
+}
+#contato .btn-primary:hover {
+  background: #0059c9;
+  transform: scale(1.05);
+}
 /* =========================
    FOOTER
 ========================= */
